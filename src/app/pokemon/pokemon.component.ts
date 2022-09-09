@@ -15,6 +15,8 @@ export class PokemonComponent implements OnInit {
   pokemon: Pokemon | undefined;
   imageUrl: string = '';
   imageUrlAux: string = '';
+  adjustExceed: string = '';
+  exceedPokemons: Array<number> = [40, 152, 153, 154, 164, 176, 186, 190, 191, 199, 201, 204, 230, 238, 240, 251]
   pokefound: boolean = false;
   errorMessage: string = '';
 
@@ -36,7 +38,13 @@ export class PokemonComponent implements OnInit {
         this.pokemon = pokemon;
         this.imageUrl = pokemon.sprites.versions['generation-v']['black-white']?.animated?.front_default;
         this.imageUrlAux = pokemon.sprites.versions['generation-viii'].icons.front_default;
-        console.log(pokemon.id.toLocaleString(undefined, {minimumIntegerDigits: 3}));
+
+        if (this.exceedPokemons.indexOf(this.pokemon.id) > -1) { 
+          this.adjustExceed = 'img_adjustExceed'; 
+        } 
+        else { 
+          this.adjustExceed = ''; 
+        }        
       },
       error: err => { this.errorMessage = err; this.pokemon = undefined; console.log("erro"); }
     });

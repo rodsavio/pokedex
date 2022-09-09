@@ -25,6 +25,11 @@
     left: 40%;
 }
 
+.img_adjustExceed {
+    top: 6.3%;
+    transform: scale(60%, 60%);
+}
+
 div::first-letter {
     text-transform:capitalize;
 }

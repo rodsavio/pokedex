@@ -2,7 +2,7 @@
     <img src="./assets/pokedex.png" alt="pokedex" class="img_pokedex">
 
     <section *ngIf="pokemon">
-        <img *ngIf="imageUrl" src={{imageUrl}} alt="pokemon" class="img_pokemon">
+        <img *ngIf="imageUrl" src={{imageUrl}} alt="pokemon" class="img_pokemon {{adjustExceed}}">
         <img *ngIf="!imageUrl" src={{imageUrlAux}} onerror="this.className='img_notFound'" alt="Pokemon Image Not Found" class="img_pokemonAlt">
 
         <div class="div_pokemonId">{{pokemon.id | minimumIntegerDigits:3}}</div>
