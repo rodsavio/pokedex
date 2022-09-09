@@ -1,7 +1,7 @@
 import { Stat } from "./stat";
-import { IType } from "./type";
+import { Type } from "./type";
 
-export interface IPokemon {
+export type Pokemon = {
     id: number;
     name: string;
     sprites: {
@@ -22,6 +22,6 @@ export interface IPokemon {
         }
     };
     stats: Stat[];
-    types: IType[];
+    types: Type[];
     weight: number;
 }

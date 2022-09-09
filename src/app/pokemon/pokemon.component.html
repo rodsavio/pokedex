@@ -13,13 +13,12 @@
                 <th>Type</th>
                 <td>
                     <div class="div_containerTypes" >
-                        <div *ngFor="let typeP of pokemon.types" class="div_type div_{{typeP.type.name}}">{{typeP.type.name}}</div>
+                        <app-pokemon-type *ngFor="let typeP of pokemon.types" typeName="{{typeP.type.name}}"></app-pokemon-type>
                     </div>
                 </td>
             </tr>
             <tr>
-                <th>Weight</th>
-                <td>{{pokemon.weight}}</td>
+                <th>Weight</th><td>{{pokemon.weight}}</td>
             </tr>
         </table>
         <table class="table_specialAttributes">
@@ -43,10 +42,7 @@
         <div class="div_errorX">X</div>
     </section>
 
-    <form (submit)="submitForm($event)" class="form_search">
-        <label>Pokemon Name or Id:</label>
-        <input id="searchElementText" type="search">
-    </form>
+    <app-search-form customLabel="Pokemon Name or Id:" (submitFormFunction)="submitForm($event)"></app-search-form>
 
     <app-buttons class="div_buttonUp" labelButton="+" (clickFunction)='clickUp()'></app-buttons>
     <app-buttons class="div_buttonDown" labelButton="-" (clickFunction)='clickDown()'></app-buttons>

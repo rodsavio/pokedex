@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, tap, throwError } from "rxjs";
-import { IPokemon } from "src/app/models/pokemon";
+import { Pokemon } from "src/app/models/pokemon";
 
 @Injectable({
     providedIn: 'root'
@@ -12,10 +12,10 @@ export class PokemonService {
 
     constructor(private http: HttpClient) {}
 
-    getPokemonById(idName: string): Observable<IPokemon> {
+    getPokemonById(idName: string): Observable<Pokemon> {
         let objectUrl = this.basePokemonUrl + 'pokemon/' + idName.toLowerCase();
 
-        return this.http.get<IPokemon>(objectUrl).pipe(
+        return this.http.get<Pokemon>(objectUrl).pipe(
             catchError(this.handleError)
         )
     }

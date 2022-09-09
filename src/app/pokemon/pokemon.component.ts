@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from 'src/service/pokemon.service';
-import { IPokemon } from '../models/pokemon';
+import { Pokemon } from '../models/pokemon';
 
 @Component({
   selector: 'app-pokemon',
@@ -12,7 +12,7 @@ export class PokemonComponent implements OnInit {
 
   constructor(private _pokemonService: PokemonService) { }
 
-  pokemon: IPokemon | undefined;
+  pokemon: Pokemon | undefined;
   imageUrl: string = '';
   imageUrlAux: string = '';
   pokefound: boolean = false;
@@ -57,5 +57,4 @@ export class PokemonComponent implements OnInit {
     
     this.searchPokemon(newPokemon.toString());
   }
-
 }

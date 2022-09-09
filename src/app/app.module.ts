@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { MinimumIntegerDigits } from './pipes/minimumIntegerDigits';
+import { SearchFormComponent } from './forms/search-form.component';
+import { PokemonTypeComponent } from './pokemon-type/pokemon-type.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonComponent,
     ButtonsComponent,
-    MinimumIntegerDigits
+    MinimumIntegerDigits,
+    SearchFormComponent,
+    PokemonTypeComponent
   ],
   imports: [
     BrowserModule,
