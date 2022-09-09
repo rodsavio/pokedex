@@ -1,0 +1,253 @@
+.img_pokedex {
+    position: relative;
+    z-index: -1;
+    width: 720px;
+}
+
+.img_pokemon{   
+    width: 120px;
+    position: absolute;
+    top: 12%;
+    left: 43%;
+}
+
+.img_pokemonAlt{
+    width: 220px;
+    position: absolute;
+    top: 5%;
+    left: 35%;
+}
+
+.img_notFound{
+    width: 150px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+
+div::first-letter {
+    text-transform:capitalize;
+}
+
+.div_pokemon{
+    display: inline-block;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 35%;
+    margin-right: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.div_pokemon h2 {
+    position: absolute;
+    top: 20%;
+    left: 42%
+}
+
+.div_errorX {
+    position: absolute;
+    top: 62%;
+    left: 46%;
+    color: red;
+    font-size: 72px;
+}
+
+.div_pokemonId {
+    position: absolute;
+    top: 36%;
+    left: 34.6%;
+    height: 10%;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+}
+
+.div_pokemonName {
+    position: absolute;
+    top: 36%;
+    left: 39%;
+    height: 10%;
+    width: 180px;
+    text-align: right;
+    font-weight: bold;
+    color: black;
+}
+
+.div_containerTypes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.div_buttonUp {
+    position: absolute;
+    top: 62%;
+    left: 22%;
+}
+
+.div_buttonDown{
+    position: absolute;
+    top: 71%;
+    left: 22.2%;
+}
+
+.table_normalAttributes {
+    color: lightgray;
+    position: absolute;
+    top: 56%;
+    left: 34.2%;
+    border-spacing: 0px;
+}
+
+.table_normalAttributes th {
+    background-color: rgb(39, 89, 154);
+    width: 58px;
+    text-align: left;
+    font-weight: normal;
+    border-bottom: 1px dashed white;
+}
+
+.table_normalAttributes td {
+    background-color: rgb(18, 112, 202);
+    width: 153px;
+    padding-left: 3px;
+    border-bottom: 1px dashed white;
+}
+
+.table_normalAttributes > tr:last-child > th {
+    border-bottom: 0;
+}
+
+.table_normalAttributes > tr:last-child > td {
+    border-bottom: 0;
+}
+
+.table_specialAttributes {
+    color: whitesmoke;
+    position: absolute;
+    top: 65%;
+    left: 34.2%;
+    border-spacing: 0px;
+}
+
+.table_specialAttributes th {
+    background-color: rgb(100, 131, 178);
+    width: 58px;
+    text-align: left;
+    font-weight: normal;
+    border-bottom: 1px dashed white;
+}
+
+.table_specialAttributes td {
+    background-color: rgb(113, 170, 220);
+    width: 44.5px;
+    padding-left: 3px;
+    border-bottom: 1px dashed white;
+    text-align: left;
+}
+
+.table_specialAttributes > tr:last-child > th {
+    border-bottom: 0;
+}
+
+.table_specialAttributes > tr:last-child > td {
+    border-bottom: 0;
+}
+
+.form_search {
+    position: absolute;
+    top: 78%;
+    left: 34.2%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.form_search input{
+    width: 103px;
+    text-align: right;
+}
+
+.div_type {
+    border-radius: 10px;
+    width: 77px;
+    color: #FFFFFF;
+    background-color: gray;
+    text-align: center;
+}
+
+.div_bug {    
+    background-color: #aabb22;
+}
+
+.div_dark {    
+    background-color: #775544;
+}
+
+.div_dragon {    
+    background-color: #7766ee;
+}
+
+.div_electric {    
+    background-color: #ffcc33;
+}
+
+.div_fairy {    
+    background-color: #ee99ee;
+}
+
+.div_fighting {    
+    background-color: #bb5544;
+}
+
+.div_fire {    
+    background-color: #ff4422;
+}
+
+.div_flying {    
+    background-color: #8899ff;
+}
+
+.div_ghost {    
+    background-color: #6666BB;
+}
+
+.div_grass {    
+    background-color: #77cc55;
+}
+
+.div_ground {    
+    background-color: #ddbb55
+}
+
+.div_ice {    
+    background-color: #66ccff
+}
+
+.div_poison {
+    background-color: #aa5599;
+}
+
+.div_psychic {
+    background-color: #ff5599;
+}
+
+.div_psychic {
+    background-color: #ff5599;
+}
+
+.div_rock {
+    background-color: #bbaa66;
+}
+
+.div_steel {
+    background-color: #aaaabb;
+}
+
+.div_water {
+    background-color: #3399ff;
+}

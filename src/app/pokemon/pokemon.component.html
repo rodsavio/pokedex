@@ -1,0 +1,56 @@
+<div class="div_pokemon">
+    <img src="./assets/pokedex.png" alt="pokedex" class="img_pokedex">
+
+    <section *ngIf="pokemon">
+        <img *ngIf="imageUrl" src={{imageUrl}} alt="pokemon" class="img_pokemon">
+        <img *ngIf="!imageUrl" src={{imageUrlAux}} onerror="this.className='img_notFound'" alt="Pokemon Image Not Found" class="img_pokemonAlt">
+
+        <div class="div_pokemonId">{{pokemon.id | minimumIntegerDigits:3}}</div>
+        <div class="div_pokemonName">{{pokemon.name}}</div>
+
+        <table class="table_normalAttributes">
+            <tr>
+                <th>Type</th>
+                <td>
+                    <div class="div_containerTypes" >
+                        <div *ngFor="let typeP of pokemon.types" class="div_type div_{{typeP.type.name}}">{{typeP.type.name}}</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>{{pokemon.weight}}</td>
+            </tr>
+        </table>
+        <table class="table_specialAttributes">
+            <tr>
+                <th>HP</th><td>{{pokemon.stats[0].base_stat}}</td>
+                <th>Sp. Atk</th><td>{{pokemon.stats[3].base_stat}}</td>
+            </tr>
+            <tr>
+                <th>Attack</th><td>{{pokemon.stats[1].base_stat}}</td>
+                <th>Sp. Def</th><td>{{pokemon.stats[4].base_stat}}</td>
+            </tr>
+            <tr>
+                <th>Defense</th><td>{{pokemon.stats[2].base_stat}}</td>
+                <th>Speed</th><td>{{pokemon.stats[5].base_stat}}</td>
+            </tr>
+        </table>        
+    </section>
+
+    <section *ngIf="!pokemon">
+        <h2>Not found</h2>
+        <div class="div_errorX">X</div>
+    </section>
+
+    <form (submit)="submitForm($event)" class="form_search">
+        <label>Pokemon Name or Id:</label>
+        <input id="searchElementText" type="search">
+    </form>
+
+    <app-buttons class="div_buttonUp" labelButton="+" (clickFunction)='clickUp()'></app-buttons>
+    <app-buttons class="div_buttonDown" labelButton="-" (clickFunction)='clickDown()'></app-buttons>
+</div>
+
+
+
